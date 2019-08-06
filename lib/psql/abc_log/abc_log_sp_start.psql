@@ -1,0 +1,11 @@
+/**
+ * Logs the start of executing a stored procedure.
+ *
+ * @param p_routine_name The name of the stored procedure.
+ */
+create procedure abc_log_sp_start(in p_routine_name varchar(64))
+reads sql data
+-- type: hidden
+begin
+  select concat_ws(' ', 'Start:', p_routine_name ) as `line`;
+end

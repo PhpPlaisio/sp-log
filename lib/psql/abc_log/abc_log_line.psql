@@ -1,0 +1,11 @@
+/**
+ * Logs a line (i.e. selects a text).
+ *
+ * @param p_text The line to be logged.
+ */
+create procedure abc_log_line(in p_text varchar(4096))
+reads sql data
+-- type: hidden
+begin
+  select p_text as `line`;
+end

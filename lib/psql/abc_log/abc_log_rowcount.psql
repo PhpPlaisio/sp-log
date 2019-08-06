@@ -1,0 +1,32 @@
+/**
+ * Creates a log message about the affected rows of a SQL statement.
+ *
+ * @param p_operation The operation:
+ * <ul>
+ * <li>I insert
+ * <li>U update
+ * <li>D delete
+ * <li>M merge
+ * <li>otherwise: affected.
+ * </ul>
+ * @param p_table_name The table name or table names (in case of multiple delete, update, merge).
+ * @param p_rowcount   The number of affected rows.
+ */
+create procedure abc_log_rowcount(p_operation  varchar(1),
+                                  p_table_name varchar(64),
+                                  p_rowcount   int)
+reads sql data
+-- type: hidden
+begin
+  declare l_message varchar(4096);
+
+  set l_message = case p_operation
+                    when 'I' then concat('Number of rows inserted into ', p_table_name, ': ', p_rowcount)
+                    when 'U' then concat('Number of rows updated in ',    p_table_name, ': ', p_rowcount)
+                    when 'D' then concat('Number of rows deleted from ',  p_table_name, ': ', p_rowcount)
+                    when 'M' then concat('Number of rows merged in ',     p_table_name, ': ', p_rowcount)
+                    else          concat('Number of rows affected of ',   p_table_name, ': ', p_rowcount)
+                  end;
+
+  call abc_log_line(l_message);
+end

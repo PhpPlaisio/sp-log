@@ -1,0 +1,14 @@
+{
+  "name": "setbased/abc-log",
+  "description": "ABC-Framework: Stored Routines (for MySQL and MariaDB) for Logging",
+  "keywords": [
+    "ABC-Framework",
+    "Stored Routines",
+    "Logging"
+  ],
+  "type": "library",
+  "license": "MIT",
+  "suggest": {
+    "SetBased/php-stratum": "A stored routine loader and wrapper class generator for MariaDB"
+  }
+}
