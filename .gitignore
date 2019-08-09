@@ -1,2 +1,6 @@
 /.idea/
+/bin/
+/composer.lock
+/dist/
+/MariadbAbcLog.egg-info/
 /vendor/

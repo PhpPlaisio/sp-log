@@ -10,5 +10,11 @@
   "license": "MIT",
   "suggest": {
     "SetBased/php-stratum": "A stored routine loader and wrapper class generator for MariaDB"
+  },
+  "require-dev": {
+    "setbased/phing-extensions": "2.*"
+  },
+  "config": {
+    "bin-dir": "bin"
   }
 }
