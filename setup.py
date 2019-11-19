@@ -16,7 +16,7 @@ setup(
     description='Stored Routines (for MySQL and MariaDB) for logging',
     long_description=long_description,
 
-    url='https://github.com/SetBased/mariadb-abc-log',
+    url='https://github.com/PhpPlaisio/sp-log',
 
     author='Set Based IT Consultancy',
     author_email='info@setbased.nl',
