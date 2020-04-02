@@ -3,7 +3,7 @@
     <property name="BUILD_DIR" value="./build"/>
 
     <!-- Run composer update and executes various other updates -->
-    <target name="composer-update">
+    <target name="update">
         <exec command="composer update" checkreturn="true" passthru="true"/>
     </target>
 
