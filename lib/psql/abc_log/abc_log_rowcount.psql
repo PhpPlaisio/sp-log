@@ -11,12 +11,13 @@
  * </ul>
  * @param p_table_name The table name or table names (in case of multiple delete, update, merge).
  * @param p_rowcount   The number of affected rows.
+ *
+ * @type hidden
  */
 create procedure abc_log_rowcount(p_operation  varchar(1),
                                   p_table_name varchar(64),
                                   p_rowcount   int)
 reads sql data
--- type: hidden
 begin
   declare l_message varchar(4096);
 
