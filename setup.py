@@ -11,7 +11,7 @@ with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
 setup(
     name='MariadbAbcLog',
 
-    version='2.1.0',
+    version='3.1.0',
 
     description='Stored Routines (for MySQL and MariaDB) for logging',
     long_description=long_description,
