@@ -1,6 +1,8 @@
 /.idea/
+/MariadbAbcLog.egg-info/
 /bin/
 /composer.lock
+/custom.task.properties
+/custom.type.properties
 /dist/
-/MariadbAbcLog.egg-info/
 /vendor/

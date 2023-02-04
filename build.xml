@@ -1,5 +1,5 @@
 <project name="PyStratum" default="build" basedir=".">
-    <taskdef name="ReadSemanticVersion" classname="vendor.setbased.phing-extensions.src.Task.ReadSemanticVersionTask"/>
+    <taskdef name="ReadSemanticVersion" classname="\SetBased\Phing\Task\ReadSemanticVersionTask"/>
     <property name="BUILD_DIR" value="./build"/>
 
     <!-- Run composer update and executes various other updates -->
@@ -29,13 +29,19 @@
 
     <!-- Creates a new distribution using setup.py -->
     <target name="dist">
-        <exec command="python3 setup.py sdist" passthru="true" checkreturn="true"/>
+        <exec executable="python3" passthru="true" checkreturn="true">
+            <arg value="setup.py"/>
+            <arg value="sdist"/>
+        </exec>
     </target>
 
     <!-- Uploads a distribution to PyPI -->
     <target name="upload">
         <loadfile property="VERSION" file=".version" failonerror="true"/>
-        <exec command="twine upload dist/MariadbAbcLog-${VERSION}.tar.gz" passthru="true" checkreturn="true"/>
+        <exec executable="twine" passthru="true" checkreturn="true">
+            <arg value="upload"/>
+            <arg value="dist/MariadbAbcLog-${VERSION}.tar.gz"/>
+        </exec>
     </target>
 
     <!-- All steps for releasing a new version -->
