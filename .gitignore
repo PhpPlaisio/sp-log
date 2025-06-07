@@ -2,7 +2,5 @@
 /MariadbAbcLog.egg-info/
 /bin/
 /composer.lock
-/custom.task.properties
-/custom.type.properties
 /dist/
 /vendor/
