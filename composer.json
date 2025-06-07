@@ -11,13 +11,11 @@
     "SetBased/php-stratum": "A stored procedure loader and wrapper class generator for MySQL and MariaDB"
   },
   "require": {
-    "php": ">=8.1"
+    "php": ">=8.3"
   },
-  "minimum-stability": "dev",
-  "prefer-stable": true,
   "require-dev": {
-    "phing/phing": "^3.0.0-RC4",
-    "setbased/phing-extensions": "^3.0.1"
+    "phing/phing": "^3.0.1",
+    "setbased/phing-extensions": "^3.1.0"
   },
   "config": {
     "bin-dir": "bin/",
